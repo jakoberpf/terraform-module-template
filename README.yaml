@@ -15,16 +15,16 @@ license: "APACHE2"
 
 # Copyrights
 copyrights:
-- name: "Cloud Posse, LLC"
-  url: "https://cloudposse.com"
-  year: "2021"
+- name: "Jakob Erpf"
+  url: "https://jakoberpf.de"
+  year: "2022"
 
 # Canonical GitHub repo
-github_repo: cloudposse/terraform-example-module
+github_repo: jakoberpf/terraform-template-module
 
 description: |-
-  This is an example project to provide all the scaffolding for a typical well-built Cloud Posse
-  Terraform module for AWS resources. It's a template repository you can
+  This is an template project to provide all the scaffolding for a typical well-built
+  Terraform module. It's a template repository you can
   use when creating new repositories. This is not a useful module by itself.
 
 quickstart: |-
@@ -40,9 +40,6 @@ quickstart: |-
   8. Commit everything to `git` and open your first PR on the new repo.
 
 references:
-- name: "Cloud Posse Documentation"
-  url: "https://docs.cloudposse.com"
-  description: "The Cloud Posse Developer Hub (documentation)"
 - name: "Terraform Standard Module Structure"
   description: "HashiCorp's standard module structure is a file and directory layout we recommend for reusable modules distributed in separate repositories."
   url: "https://www.terraform.io/docs/language/modules/develop/structure.html"
