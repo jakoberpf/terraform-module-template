@@ -1,78 +1,16 @@
-########################################################################################################################
-########################################################################################################################
-########################################################################################################################
-#         DELETE ME
-#
-# This is the README configuration for the Example module itself.
-# Delete this (up to and including the line with `---`) and fill in
-# the template below the dashes
+#   1. Use this repo as a template for a new repo.
+#   2. Check out the new repo and create a `git` branch to work on.
+#   3. Replace the Terraform code at the root of the repo with the code you want to publish.
+#   4. Replace the code in `examples/complete` with Terraform code that will make a good automated test.
+#      Please keep `context.tf` and `fixtures.us-east-2.tfvars` in place and change only `name`, leaving
+#      `region`, `namespace`, `environment`, and `stage` as is. Provide outputs that will be useful for testing.
+#   5. Update `test/src/examples_complete_test.go` to verify the outputs of running `terraform apply` on `examples/complete`.
+#   6. Run `make github/init` to update the repo with the current Cloud Posse framework files (e.g. `CODEOWNERS`).
+#   7. Run `make pr/auto-format` to format the Terraform code and generate documentation.
+#   8. Commit everything to `git` and open your first PR on the new repo.
 
 # Name of this project
-name: terraform-example-module
-
-# License of this project
-license: "APACHE2"
-
-# Copyrights
-copyrights:
-- name: "Jakob Erpf"
-  url: "https://jakoberpf.de"
-  year: "2022"
-
-# Canonical GitHub repo
-github_repo: jakoberpf/terraform-template-module
-
-description: |-
-  This is an template project to provide all the scaffolding for a typical well-built
-  Terraform module. It's a template repository you can
-  use when creating new repositories. This is not a useful module by itself.
-
-quickstart: |-
-  1. Use this repo as a template for a new repo.
-  2. Check out the new repo and create a `git` branch to work on.
-  3. Replace the Terraform code at the root of the repo with the code you want to publish.
-  4. Replace the code in `examples/complete` with Terraform code that will make a good automated test.
-     Please keep `context.tf` and `fixtures.us-east-2.tfvars` in place and change only `name`, leaving
-     `region`, `namespace`, `environment`, and `stage` as is. Provide outputs that will be useful for testing.
-  5. Update `test/src/examples_complete_test.go` to verify the outputs of running `terraform apply` on `examples/complete`.
-  6. Run `make github/init` to update the repo with the current Cloud Posse framework files (e.g. `CODEOWNERS`).
-  7. Run `make pr/auto-format` to format the Terraform code and generate documentation.
-  8. Commit everything to `git` and open your first PR on the new repo.
-
-references:
-- name: "Terraform Standard Module Structure"
-  description: "HashiCorp's standard module structure is a file and directory layout we recommend for reusable modules distributed in separate repositories."
-  url: "https://www.terraform.io/docs/language/modules/develop/structure.html"
-- name: "Terraform Module Requirements"
-  description: "HashiCorp's guidance on all the requirements for publishing a module. Meeting the requirements for publishing a module is extremely easy."
-  url: "https://www.terraform.io/docs/registry/modules/publish.html#requirements"
-- name: "Terraform Version Pinning"
-  description: "The required_version setting can be used to constrain which versions of the Terraform CLI can be used with your configuration"
-  url: "https://www.terraform.io/docs/language/settings/index.html#specifying-a-required-terraform-version"
-
-related:
-- name: "Example App"
-  url: "https://github.com/cloudposse/example-app"
-  description: "Example application for CI/CD demonstrations of Codefresh"
-
-
----
-#         DELETE ME
-#
-# The above is the README configuration for the Example module itself.
-# Delete from here to the top of file and fill in the template below
-########################################################################################################################
-########################################################################################################################
-########################################################################################################################
-
-
-#
-# This is the canonical configuration for the `README.md`
-# Run `make readme` to rebuild the `README.md`
-#
-
-# Name of this project
-name:
+name: terraform-template-module
 
 # Logo for this project
 #logo: docs/logo.png
@@ -82,24 +20,21 @@ license: "APACHE2"
 
 # Copyrights
 copyrights:
-  - name: "Cloud Posse, LLC"
-    url: "https://cloudposse.com"
-    year: "2021"
+  - name: "Jakob Erpf"
+    url: "https://jakob.erpf.de"
+    year: "2022"
 
 # Canonical GitHub repo
-github_repo:
+github_repo: jakoberpf/terraform-template-module
 
 # Badges to display
 badges:
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/terraform-example-module.svg"
-    url: "https://github.com/cloudposse/terraform-example-module/releases/latest"
+    image: "https://img.shields.io/github/release/jakoberpf/terraform-template-module.svg"
+    url: "https://github.com/jakoberpf/terraform-template-module/releases/latest"
   - name: "Slack Community"
-    image: "https://slack.cloudposse.com/badge.svg"
-    url: "https://slack.cloudposse.com"
-  - name: "Discourse Forum"
-    image: "https://img.shields.io/discourse/https/ask.sweetops.com/posts.svg"
-    url: "https://ask.sweetops.com/"
+    image: "https://slack.erpf.de/badge.svg"
+    url: "https://slack.erpf.de"
 
 # List any related terraform modules that this module may be used with or that this module depends on.
 related:
@@ -164,5 +99,5 @@ include:
 
 # Contributors to this project
 contributors:
-  - name: "Erik Osterman"
-    github: "osterman"
+  - name: "Jakob Erpf"
+    github: "jakoberpf"
