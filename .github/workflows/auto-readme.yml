@@ -15,7 +15,7 @@ jobs:
       id: defaultBranch
       shell: bash
       env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_TOKEN: "${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}"
       run: |
         default_branch=$(gh repo view --json defaultBranchRef --jq .defaultBranchRef.name)
         printf "::set-output name=defaultBranch::%s\n" "${default_branch}"
