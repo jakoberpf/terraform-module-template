@@ -5,7 +5,7 @@
 
 [![README Header][readme_header_img]][readme_header_link]
 
-[![Cloud Posse][logo]](https://jakob.erpf.de)
+[![Cloud Posse][logo]](https://cpco.io/homepage)
 
 <!--
 
@@ -28,8 +28,7 @@
 
 -->
 
-Short
-description
+This is a terraform module template. BlaBla
 
 ---
 
