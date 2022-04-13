@@ -1,7 +1,9 @@
 name: "auto-readme"
+
 on:
-  pull_request_target:
-    types: [opened, synchronize]
+  push:
+    branches:
+      - main
 
 jobs:
   update:
