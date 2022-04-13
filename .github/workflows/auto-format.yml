@@ -20,7 +20,6 @@ jobs:
       name: Privileged Checkout
       with:
         token: ${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}
-        repository: ${{ github.event.pull_request.head.repo.full_name }}
         # Check out the PR commit, not the merge commit
         # Use `ref` instead of `sha` to enable pushing back to `ref`
         ref: ${{ github.event.pull_request.head.ref }}
