@@ -9,7 +9,6 @@ This project is part the boilderplate project for all of my terraform modules, w
 
 This is an introduction.
 
-
 ## Security & Compliance [<img src="https://cloudposse.com/wp-content/uploads/2020/11/bridgecrew.svg" width="250" align="right" />](https://bridgecrew.io/)
 
 Security scanning is graciously provided by Bridgecrew. Bridgecrew is the leading fully hosted, cloud-native solution providing continuous Terraform security and compliance.
@@ -27,10 +26,7 @@ Security scanning is graciously provided by Bridgecrew. Bridgecrew is the leadin
 | [![CIS GCP](https://www.bridgecrew.cloud/badges/github/jakoberpf/terraform-module-template/cis_gcp)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=jakoberpf%2Fterraform-module-template&benchmark=CIS+GCP+V1.1) | Center for Internet Security, GCP Compliance |
 | [![HIPAA](https://www.bridgecrew.cloud/badges/github/jakoberpf/terraform-module-template/hipaa)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=jakoberpf%2Fterraform-module-template&benchmark=HIPAA) | Health Insurance Portability and Accountability Compliance |
 
-
-
 ## Usage
-
 
 **IMPORTANT:** I do not pin modules to versions in our examples because of the
 difficulty of keeping the versions in the documentation in sync with the latest released versions.
@@ -70,13 +66,11 @@ module "example" {
 
 Here's how to get started...
 
-
 ## Examples
 
 Here is an example of using this module:
+
 - [`examples/complete`](https://github.com/cloudposse/terraform-example-module/) - complete example of using this module
-
-
 
 <!-- markdownlint-disable -->
 ## Makefile Targets
@@ -151,76 +145,17 @@ Available targets:
 <!-- END_TF_DOCS -->
 <!-- markdownlint-restore -->
 
-
-
 ## Share the Love
 
 Like this project? Please give it a ★ on [our GitHub](https://github.com/jakoberpf/terraform-module-template)! (it helps us **a lot**)
 
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
-
-
 ## Related Projects
 
 Check out these related projects.
 
 - [terraform-null-label](https://github.com/cloudposse/terraform-null-label) - Terraform module designed to generate consistent names and tags for resources. Use terraform-null-label to implement a strict naming convention.
-
-
-## References
-
-For additional context, refer to some of these links.
-
-
-
-## Help
-
-**Got a question?** We got answers.
-
-File a GitHub [issue](https://github.com/jakoberpf/terraform-module-template/issues), send us an [email][email] or join our [Slack Community][slack].
-
-[![README Commercial Support][readme_commercial_support_img]][readme_commercial_support_link]
-
-## DevOps Accelerator for Startups
-
-
-We are a [**DevOps Accelerator**][commercial_support]. We'll help you build your cloud infrastructure from the ground up so you can own it. Then we'll show you how to operate it and stick around for as long as you need us.
-
-[![Learn More](https://img.shields.io/badge/learn%20more-success.svg?style=for-the-badge)][commercial_support]
-
-Work directly with our team of DevOps experts via email, slack, and video conferencing.
-
-We deliver 10x the value for a fraction of the cost of a full-time engineer. Our track record is not even funny. If you want things done right and you need it done FAST, then we're your best bet.
-
-- **Reference Architecture.** You'll get everything you need from the ground up built using 100% infrastructure as code.
-- **Release Engineering.** You'll have end-to-end CI/CD with unlimited staging environments.
-- **Site Reliability Engineering.** You'll have total visibility into your apps and microservices.
-- **Security Baseline.** You'll have built-in governance with accountability and audit logs for all changes.
-- **GitOps.** You'll be able to operate your infrastructure via Pull Requests.
-- **Training.** You'll receive hands-on training so your team can operate what we build.
-- **Questions.** You'll have a direct line of communication between our teams via a Shared Slack channel.
-- **Troubleshooting.** You'll get help to triage when things aren't working.
-- **Code Reviews.** You'll receive constructive feedback on Pull Requests.
-- **Bug Fixes.** We'll rapidly work with you to fix any bugs in our projects.
-
-## Slack Community
-
-Join our [Open Source Community][slack] on Slack. It's **FREE** for everyone! Our "SweetOps" community is where you get to talk with others who share a similar vision for how to rollout and manage infrastructure. This is the best place to talk shop, ask questions, solicit feedback, and work together as a community to build totally *sweet* infrastructure.
-
-## Discourse Forums
-
-Participate in our [Discourse Forums][discourse]. Here you'll find answers to commonly asked questions. Most questions will be related to the enormous number of projects we support on our GitHub. Come here to collaborate on answers, find solutions, and get ideas about the products and services we value. It only takes a minute to get started! Just sign in with SSO using your GitHub account.
-
-## Newsletter
-
-Sign up for [our newsletter][newsletter] that covers everything on our technology radar.  Receive updates on what we're up to on GitHub as well as awesome new projects we discover.
-
-## Office Hours
-
-[Join us every Wednesday via Zoom][office_hours] for our weekly "Lunch & Learn" sessions. It's **FREE** for everyone!
-
-[![zoom](https://img.cloudposse.com/fit-in/200x200/https://cloudposse.com/wp-content/uploads/2019/08/Powered-by-Zoom.png")][office_hours]
 
 ## Contributing
 
@@ -242,15 +177,9 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 **NOTE:** Be sure to merge the latest changes from "upstream" before making a pull request!
 
-
-
 ## Copyrights
 
-Copyright © 2022-2022 [Jakob Erpf](https://jakob.erpf.de)
-
-
-
-
+Copyright © 2021-2022 [Jakob Erpf](https://jakob.erpf.de)
 
 ## License
 
@@ -277,31 +206,9 @@ specific language governing permissions and limitations
 under the License.
 ```
 
-
-
-
-
-
-
-
-
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
-
-## About
-
-This project is maintained and funded by [Cloud Posse, LLC][website]. Like it? Please let us know by [leaving a testimonial][testimonial]!
-
-[![Cloud Posse][logo]][website]
-
-We're a [DevOps Professional Services][hire] company based in Los Angeles, CA. We ❤️  [Open Source Software][we_love_open_source].
-
-We offer [paid support][commercial_support] on all of our projects.
-
-Check out [our other projects][github], [follow us on twitter][twitter], [apply for a job][jobs], or [hire us][hire] to help with your cloud strategy and implementation.
-
-
 
 ### Contributors
 
@@ -312,37 +219,3 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
   [jakoberpf_homepage]: https://github.com/jakoberpf
   [jakoberpf_avatar]: https://img.cloudposse.com/150x150/https://github.com/jakoberpf.png
-
-[![README Footer][readme_footer_img]][readme_footer_link]
-[![Beacon][beacon]][website]
-
-  [logo]: https://cloudposse.com/logo-300x69.svg
-  [docs]: https://cpco.io/docs?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=docs
-  [website]: https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=website
-  [github]: https://cpco.io/github?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=github
-  [jobs]: https://cpco.io/jobs?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=jobs
-  [hire]: https://cpco.io/hire?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=hire
-  [slack]: https://cpco.io/slack?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=slack
-  [linkedin]: https://cpco.io/linkedin?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=linkedin
-  [twitter]: https://cpco.io/twitter?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=twitter
-  [testimonial]: https://cpco.io/leave-testimonial?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=testimonial
-  [office_hours]: https://cloudposse.com/office-hours?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=office_hours
-  [newsletter]: https://cpco.io/newsletter?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=newsletter
-  [discourse]: https://ask.sweetops.com/?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=discourse
-  [email]: https://cpco.io/email?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=email
-  [commercial_support]: https://cpco.io/commercial-support?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=commercial_support
-  [we_love_open_source]: https://cpco.io/we-love-open-source?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=we_love_open_source
-  [terraform_modules]: https://cpco.io/terraform-modules?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=terraform_modules
-  [readme_header_img]: https://cloudposse.com/readme/header/img
-  [readme_header_link]: https://cloudposse.com/readme/header/link?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=readme_header_link
-  [readme_footer_img]: https://cloudposse.com/readme/footer/img
-  [readme_footer_link]: https://cloudposse.com/readme/footer/link?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=readme_footer_link
-  [readme_commercial_support_img]: https://cloudposse.com/readme/commercial-support/img
-  [readme_commercial_support_link]: https://cloudposse.com/readme/commercial-support/link?utm_source=github&utm_medium=readme&utm_campaign=jakoberpf/terraform-module-template&utm_content=readme_commercial_support_link
-  [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-module-template&url=https://github.com/jakoberpf/terraform-module-template
-  [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-module-template&url=https://github.com/jakoberpf/terraform-module-template
-  [share_reddit]: https://reddit.com/submit/?url=https://github.com/jakoberpf/terraform-module-template
-  [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/jakoberpf/terraform-module-template
-  [share_googleplus]: https://plus.google.com/share?url=https://github.com/jakoberpf/terraform-module-template
-  [share_email]: mailto:?subject=terraform-module-template&body=https://github.com/jakoberpf/terraform-module-template
-  [beacon]: https://ga-beacon.cloudposse.com/UA-76589703-4/jakoberpf/terraform-module-template?pixel&cs=github&cm=readme&an=terraform-module-template
