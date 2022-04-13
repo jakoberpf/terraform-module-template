@@ -5,8 +5,6 @@
 
 This project is part the boilderplate project for all of my terraform modules, which are all licensed under the [APACHE2](LICENSE).
 
-[![Terraform Open Source Modules](https://docs.cloudposse.com/images/terraform-open-source-modules.svg)][terraform_modules]
-
 ## Introduction
 
 This is an introduction.

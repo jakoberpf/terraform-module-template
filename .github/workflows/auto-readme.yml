@@ -1,25 +1,13 @@
 name: "auto-readme"
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
-    - name: Find default branch name
-      id: defaultBranch
-      shell: bash
-      env:
-        GITHUB_TOKEN: "${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}"
-      run: |
-        default_branch=$(gh repo view --json defaultBranchRef --jq .defaultBranchRef.name)
-        printf "::set-output name=defaultBranch::%s\n" "${default_branch}"
-        printf "defaultBranchRef.name=%s\n" "${default_branch}"
 
     - name: Update Readme
       uses: terraform-docs/gh-actions@v1.0.0
