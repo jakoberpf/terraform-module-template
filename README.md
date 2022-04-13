@@ -150,6 +150,7 @@ Available targets:
 ```
 <!-- markdownlint-restore -->
 <!-- markdownlint-disable -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -206,6 +207,7 @@ Available targets:
 | <a name="output_example"></a> [example](#output\_example) | Example output |
 | <a name="output_id"></a> [id](#output\_id) | ID of the created example |
 | <a name="output_random"></a> [random](#output\_random) | Stable random number for this example |
+<!-- END_TF_DOCS -->
 <!-- markdownlint-restore -->
 
 

@@ -21,20 +21,12 @@ jobs:
         printf "::set-output name=defaultBranch::%s\n" "${default_branch}"
         printf "defaultBranchRef.name=%s\n" "${default_branch}"
 
-    - name: Update readme
-      shell: bash
-      id: update
-      env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        DEF: "${{ steps.defaultBranch.outputs.defaultBranch }}"
-      run: |
-        make init
-        make readme/build
-        # Ignore changes if they are only whitespace
-        if ! git diff --quiet README.md && git diff --ignore-all-space --ignore-blank-lines --quiet README.md; then
-          git restore README.md
-          echo Ignoring whitespace-only changes in README
-        fi
+    - name: Update Readme
+      uses: terraform-docs/gh-actions@v1.0.0
+      with:
+        working-dir: .
+        output-file: README.md
+        output-method: inject
 
     - name: Create Pull Request
       # This action will not create or change a pull request if there are no changes to make.
