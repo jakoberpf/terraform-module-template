@@ -1,6 +1,6 @@
 
 <!-- markdownlint-disable -->
-# terraform-template-module [![Latest Release](https://img.shields.io/github/release/jakoberpf/terraform-template-module.svg)](https://github.com/jakoberpf/terraform-template-module/releases/latest) [![Slack Community](https://slack.erpf.de/badge.svg)](https://slack.erpf.de)
+# terraform-template-module [![Latest Release](https://img.shields.io/github/release/jakoberpf/terraform-module-template.svg)](https://github.com/jakoberpf/terraform-template-module/releases/latest) [![Slack Community](https://slack.erpf.de/badge.svg)](https://slack.erpf.de)
 <!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
@@ -149,6 +149,7 @@ Available targets:
 ```
 <!-- markdownlint-restore -->
 <!-- markdownlint-disable -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -205,6 +206,7 @@ Available targets:
 | <a name="output_example"></a> [example](#output\_example) | Example output |
 | <a name="output_id"></a> [id](#output\_id) | ID of the created example |
 | <a name="output_random"></a> [random](#output\_random) | Stable random number for this example |
+<!-- END_TF_DOCS -->
 <!-- markdownlint-restore -->
 
 
