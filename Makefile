@@ -2,4 +2,7 @@ SHELL := /bin/bash
 
 ## Lint terraform code
 lint:
-	$(SELF) terraform/install terraform/get-modules terraform/get-plugins terraform/lint terraform/validate
+	@echo "TODO"
+
+terraform-docs:
+	@terraform-docs markdown table --output-file docs/terraform.md --output-mode inject .
