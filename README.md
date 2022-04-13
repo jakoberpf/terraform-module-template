@@ -1,6 +1,6 @@
 
 <!-- markdownlint-disable -->
-# terraform-template-module [![Latest Release](https://img.shields.io/github/release/jakoberpf/terraform-template-module.svg)](https://github.com/jakoberpf/terraform-template-module/releases/latest) [![Slack Community](https://slack.erpf.de/badge.svg)](https://slack.erpf.de)
+# terraform-template-module [![Latest Release](https://img.shields.io/github/release/jakoberpf/terraform-module-template.svg)](https://github.com/jakoberpf/terraform-template-module/releases/latest) [![Slack Community](https://slack.erpf.de/badge.svg)](https://slack.erpf.de)
 <!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
