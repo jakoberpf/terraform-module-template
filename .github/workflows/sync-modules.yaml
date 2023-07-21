@@ -1,0 +1,25 @@
+name: 'sync'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    name: 'sync .github workflows and configuration'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 'install requirements'
+        run: pip install -r sync/requirements.txt
+
+      - name: 'run python sync scripts'
+        run: python sync/sync-modules.py
