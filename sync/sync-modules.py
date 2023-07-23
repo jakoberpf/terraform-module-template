@@ -61,6 +61,9 @@ def main():
       print("repo is not present")
       repo = Repo.clone_from(git_url, repo_dir)
 
+    repo.config_writer().set_value("name", "email", "automation").release()
+    repo.config_writer().set_value("name", "email", "automation@jakoberpf.de").release()
+    
     print(repo.remote().refs)
 
     if sync_branch_name in repo.remote().refs:
