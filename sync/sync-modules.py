@@ -49,6 +49,7 @@ github_files = [
 
 sync_branch_name = "terraform-module-template-sync"
 
+
 def main():
   for repo_name in repo_names:
     git_url = "https://github.com/jakoberpf/" + repo_name
@@ -61,9 +62,12 @@ def main():
       print("repo is not present")
       repo = Repo.clone_from(git_url, repo_dir)
 
-    repo.config_writer().set_value("name", "email", "automation").release()
-    repo.config_writer().set_value("name", "email", "automation@jakoberpf.de").release()
-    
+    repo.config_writer().set_value("name", "email", "Jakob Boghdady").release()
+    repo.config_writer().set_value("name", "email", "github@jakoberpf.de").release()
+
+    os.system("git config --global user.name \"Jakob Boghdady\"")
+    os.system("git config --global user.email \"github@jakoberpf.de\"")
+
     print(repo.remote().refs)
 
     if sync_branch_name in repo.remote().refs:
@@ -98,5 +102,6 @@ def main():
     # Public Web Github
     # g = Github(auth=auth)
 
+
 if __name__ == '__main__':
-    main()
+  main()
