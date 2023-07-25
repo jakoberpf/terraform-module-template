@@ -70,7 +70,7 @@ def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch,
 
 def main():
   for repo_name in repo_names:
-    git_url = f"git@github.com:{repo_owner}/{repo_name}.git"
+    git_url = f"https://github.com/{repo_owner}/{repo_name}"
     print(git_url)
     repo_dir = path.join("repos/", repo_name)
     print(repo_dir)
