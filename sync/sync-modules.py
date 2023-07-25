@@ -117,7 +117,7 @@ def main():
     else:
       print('no changes')
 
-    auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
+    auth = Auth.Token(os.getenv("PUBLIC_REPO_ACCESS_TOKEN"))
 
     github = Github(auth=auth)
 
