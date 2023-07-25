@@ -111,6 +111,7 @@ def main():
       repo.git.add(A=True)
       dtime = strftime('%d-%m-%Y %H:%M:%S', localtime())
       repo.git.commit(m='Updated on' + dtime)
+      repo.git.remote('set-url', 'origin', f'https://{repo_owner}:{os.getenv("PUBLIC_REPO_ACCESS_TOKEN")}@github.com/{repo_owner}/{repo_name}.git')
       repo.git.push('--set-upstream', 'origin', current)
       print('git push')
 
