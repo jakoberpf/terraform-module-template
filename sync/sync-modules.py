@@ -119,8 +119,8 @@ def main():
     body = "This pull request syncs this module with the template module."
     base_branch = "main"
 
-    pull_request = create_pull_request(github, repo_owner, repo_name, base_branch, sync_branch_name, title, body)
-    print(f"Pull request created: {pull_request.html_url}")
+    # pull_request = create_pull_request(github, repo_owner, repo_name, base_branch, sync_branch_name, title, body)
+    # print(f"Pull request created: {pull_request.html_url}")
 
 
 if __name__ == '__main__':
