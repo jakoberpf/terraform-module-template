@@ -7,6 +7,8 @@ from time import strftime, localtime
 from git import Repo
 from github import Auth, Github
 
+repo_owner = "jakoberpf"
+
 repo_names = [
   "terraform-erpf-gateway-ingress",
   # ## kubernetes
@@ -48,9 +50,24 @@ github_files = [
 sync_branch_name = "terraform-module-template-sync"
 
 
+def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch, title, body):
+  # Connect to the repository
+  repo = github.get_repo(f"{repo_owner}/{repo_name}")
+
+  # Create the pull request
+  pull_request = repo.create_pull(
+    title=title,
+    body=body,
+    base=base_branch,
+    head=head_branch
+  )
+
+  return pull_request
+
+
 def main():
   for repo_name in repo_names:
-    git_url = "https://github.com/jakoberpf/" + repo_name
+    git_url = f"https://github.com/{repo_owner}/{repo_name}"
     repo_dir = path.join("repos/", repo_name)
 
     if path.isdir(repo_dir):
@@ -88,17 +105,22 @@ def main():
       repo.git.add(A=True)
       dtime = strftime('%d-%m-%Y %H:%M:%S', localtime())
       repo.git.commit(m='Updated on' + dtime)
-      # repo.git.push('--set-upstream', 'origin', current)
-      # print('git push')
+      repo.git.push('--set-upstream', 'origin', current)
+      print('git push')
 
     else:
       print('no changes')
 
-    # using an access token
     auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
 
-    # Public Web Github
     github = Github(auth=auth)
+
+    title = "Sync from template module"
+    body = "This pull request syncs this module with the template module."
+    base_branch = "main"
+
+    pull_request = create_pull_request(github, repo_owner, repo_name, base_branch, sync_branch_name, title, body)
+    print(f"Pull request created: {pull_request.html_url}")
 
 
 if __name__ == '__main__':
