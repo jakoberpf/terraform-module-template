@@ -5,9 +5,7 @@ from os import path
 from time import strftime, localtime
 
 from git import Repo
-
-# from github import Github
-from github import Auth
+from github import Auth, Github
 
 repo_names = [
   "terraform-erpf-gateway-ingress",
@@ -100,7 +98,7 @@ def main():
     auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
 
     # Public Web Github
-    # g = Github(auth=auth)
+    github = Github(auth=auth)
 
 
 if __name__ == '__main__':
