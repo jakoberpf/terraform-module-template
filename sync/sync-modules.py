@@ -49,6 +49,8 @@ github_files = [
 
 sync_branch_name = "terraform-module-template-sync"
 
+github_token = os.getenv("PUBLIC_REPO_ACCESS_TOKEN")
+
 # def clone_or_fetch_repository():
 
 # def checkout_branch_or_create():
@@ -70,7 +72,7 @@ def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch,
 
 def main():
   for repo_name in repo_names:
-    git_url = f"https://github.com/{repo_owner}/{repo_name}"
+    git_url = f"https://{repo_owner}:{github_token}@github.com/{repo_owner}/{repo_name}.git"
     print(git_url)
     repo_dir = path.join("repos/", repo_name)
     print(repo_dir)
@@ -111,14 +113,13 @@ def main():
       repo.git.add(A=True)
       dtime = strftime('%d-%m-%Y %H:%M:%S', localtime())
       repo.git.commit(m='Updated on' + dtime)
-      repo.git.remote('set-url', 'origin', f'https://{repo_owner}:{os.getenv("PUBLIC_REPO_ACCESS_TOKEN")}@github.com/{repo_owner}/{repo_name}.git')
       repo.git.push('--set-upstream', 'origin', current)
       print('git push')
 
     else:
       print('no changes')
 
-    auth = Auth.Token(os.getenv("PUBLIC_REPO_ACCESS_TOKEN"))
+    auth = Auth.Token(github_token)
 
     github = Github(auth=auth)
 
