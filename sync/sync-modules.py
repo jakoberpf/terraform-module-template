@@ -67,15 +67,19 @@ def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch,
 
 def main():
   for repo_name in repo_names:
-    git_url = f"https://github.com/{repo_owner}/{repo_name}"
+    git_url = "https://github.com/jakoberpf/" + repo_name
+    # git_url = f"https://github.com/{repo_owner}/{repo_name}"
+    print(git_url)
     repo_dir = path.join("repos/", repo_name)
+    print(repo_dir)
 
     if path.isdir(repo_dir):
-      print("repo already present")
+      print("repo already present, not cloning")
       repo = Repo(repo_dir)
     else:
-      print("repo is not present")
+      print("repo is not present, cloning repo")
       repo = Repo.clone_from(git_url, repo_dir)
+      print("repo cloned")
 
     repo.config_writer().set_value("name", "email", "Jakob Boghdady").release()
     repo.config_writer().set_value("name", "email", "github@jakoberpf.de").release()
