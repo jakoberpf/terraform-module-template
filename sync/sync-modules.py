@@ -49,6 +49,9 @@ github_files = [
 
 sync_branch_name = "terraform-module-template-sync"
 
+# def clone_or_fetch_repository():
+
+# def checkout_branch_or_create():
 
 def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch, title, body):
   # Connect to the repository
@@ -67,8 +70,7 @@ def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch,
 
 def main():
   for repo_name in repo_names:
-    git_url = "https://github.com/jakoberpf/" + repo_name
-    # git_url = f"https://github.com/{repo_owner}/{repo_name}"
+    git_url = f"git@github.com:{repo_owner}/{repo_name}.git"
     print(git_url)
     repo_dir = path.join("repos/", repo_name)
     print(repo_dir)
