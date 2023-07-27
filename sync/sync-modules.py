@@ -60,8 +60,13 @@ github_token = os.getenv("REPO_WORKFLOWS_TOKEN")
 def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch, title, body):
   # Connect to the repository
   repo = github.get_repo(f"{repo_owner}/{repo_name}")
-  print(repo.get_pulls().get_page(title))
-  if not repo.get_pulls().get_page(title):
+  pull_exists: bool = False
+
+  for pull in repo.get_pulls():
+    if pull.title == title:
+      pull_exists = True
+
+  if not pull_exists:
     # Create the pull request
     pull_request = repo.create_pull(
       title=title,
