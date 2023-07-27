@@ -58,10 +58,9 @@ github_token = os.getenv("REPO_WORKFLOWS_TOKEN")
 # def checkout_branch_or_create():
 
 def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch, title, body):
-  # Connect to the repository
   repo = github.get_repo(f"{repo_owner}/{repo_name}")
-  pull_exists: bool = False
 
+  pull_exists: bool = False
   for pull in repo.get_pulls():
     if pull.title == title:
       pull_exists = True
@@ -75,9 +74,11 @@ def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch,
       head=head_branch
     )
 
+    print(f"Pull request created: {pull_request.html_url}")
     return pull_request
   else:
     print("Pull request already exists")
+    return None
 
 
 def main():
@@ -142,7 +143,6 @@ def main():
     base_branch = "main"
 
     pull_request = create_pull_request(github, repo_owner, repo_name, base_branch, sync_branch_name, title, body)
-    print(f"Pull request created: {pull_request.html_url}")
 
 
 if __name__ == '__main__':
