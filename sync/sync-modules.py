@@ -6,7 +6,7 @@ from os import path
 from time import strftime, localtime
 
 from git import Repo
-from github import Auth  # , Github
+from github import Auth, Github
 
 repo_owner = "jakoberpf"
 
@@ -127,14 +127,14 @@ def main():
 
     auth = Auth.Token(github_token)
 
-    # github = Github(auth=auth)
+    github = Github(auth=auth)
 
     title = "Sync from template module"
     body = "This pull request syncs this module with the template module."
     base_branch = "main"
 
-    # pull_request = create_pull_request(github, repo_owner, repo_name, base_branch, sync_branch_name, title, body)
-    # print(f"Pull request created: {pull_request.html_url}")
+    pull_request = create_pull_request(github, repo_owner, repo_name, base_branch, sync_branch_name, title, body)
+    print(f"Pull request created: {pull_request.html_url}")
 
 
 if __name__ == '__main__':
