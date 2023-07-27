@@ -60,16 +60,19 @@ github_token = os.getenv("REPO_WORKFLOWS_TOKEN")
 def create_pull_request(github, repo_owner, repo_name, base_branch, head_branch, title, body):
   # Connect to the repository
   repo = github.get_repo(f"{repo_owner}/{repo_name}")
+  print(repo.get_pulls())
+  if title not in repo.get_pulls():
+    # Create the pull request
+    pull_request = repo.create_pull(
+      title=title,
+      body=body,
+      base=base_branch,
+      head=head_branch
+    )
 
-  # Create the pull request
-  pull_request = repo.create_pull(
-    title=title,
-    body=body,
-    base=base_branch,
-    head=head_branch
-  )
-
-  return pull_request
+    return pull_request
+  else:
+    print("Pull request already exists")
 
 
 def main():
