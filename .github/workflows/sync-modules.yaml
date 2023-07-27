@@ -52,5 +52,5 @@ jobs:
       - name: 'run python sync scripts'
         run: python sync/sync-modules.py
         env:
-          REPO: ${{ matrix.repository }}'
+          REPO: ${{ matrix.repository }}
           REPO_WORKFLOWS_TOKEN: ${{ secrets.REPO_WORKFLOWS_TOKEN }}
