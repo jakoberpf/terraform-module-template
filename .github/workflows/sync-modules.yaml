@@ -14,29 +14,29 @@ jobs:
       matrix:
         repository:
           - 'jakoberpf/terraform-erpf-gateway-ingress'
-          # ## kubernetes
-          # "terraform-kubernetes-longhorn-deployment",
-          # "terraform-kubernetes-external-secrets-deployment",
-          # "terraform-kubernetes-prometheus-stack-deployment",
-          # "terraform-kubernetes-prometheus-adapter-deployment",
-          # "terraform-kubernetes-certmanager-deployment",
-          # "terraform-kubernetes-certificate-manager-deployment",
-          # "terraform-kubernetes-secrets-manager-deployment",
-          # "terraform-kubernetes-traefik-deployment",
-          # "terraform-kubernetes-flux-deployment",
-          # "terraform-kubernetes-argo-deployment",
-          # "terraform-kubernetes-metallb-deployment",
-          # ## proxmox
-          # "terraform-proxmox-kubernetes-cluster",
-          # "terraform-proxmox-kubernetes-node",
-          # ## oracle
-          # "terraform-oracle-kubernetes-node",
-          # "terraform-oracle-base-vpc",
-          # "terraform-oracle-peering-local",
-          # ## zerotier
-          # "terraform-zerotier-base-network",
-          # "terraform-zerotier-base-member",
-          # "terraform-zerotier-cluster-network",
+          ## kubernetes
+          - "jakoberpf/terraform-kubernetes-longhorn-deployment",
+          - "jakoberpf/terraform-kubernetes-external-secrets-deployment",
+          - "jakoberpf/terraform-kubernetes-prometheus-stack-deployment",
+          - "jakoberpf/terraform-kubernetes-prometheus-adapter-deployment",
+          - "jakoberpf/terraform-kubernetes-certmanager-deployment",
+          - "jakoberpf/terraform-kubernetes-certificate-manager-deployment",
+          - "jakoberpf/terraform-kubernetes-secrets-manager-deployment",
+          - "jakoberpf/terraform-kubernetes-traefik-deployment",
+          - "jakoberpf/terraform-kubernetes-flux-deployment",
+          - "jakoberpf/terraform-kubernetes-argo-deployment",
+          - "jakoberpf/terraform-kubernetes-metallb-deployment",
+          ## proxmox
+          - "jakoberpf/terraform-proxmox-kubernetes-cluster",
+          - "jakoberpf/terraform-proxmox-kubernetes-node",
+          ## oracle
+          - "jakoberpf/terraform-oracle-kubernetes-node",
+          - "jakoberpf/terraform-oracle-base-vpc",
+          - "jakoberpf/terraform-oracle-peering-local",
+          ## zerotier
+          - "jakoberpf/terraform-zerotier-base-network",
+          - "jakoberpf/terraform-zerotier-base-member",
+          - "jakoberpf/terraform-zerotier-cluster-network",
     steps:
       - name: 'checkout'
         uses: actions/checkout@v3
