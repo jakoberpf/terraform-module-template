@@ -8,13 +8,41 @@ on:
 
 jobs:
   sync:
-    name: 'sync .github workflows and configuration'
+    name: 'sync ${{ matrix.repository }}'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repository:
+          - 'jakoberpf/terraform-erpf-gateway-ingress'
+          # ## kubernetes
+          # "terraform-kubernetes-longhorn-deployment",
+          # "terraform-kubernetes-external-secrets-deployment",
+          # "terraform-kubernetes-prometheus-stack-deployment",
+          # "terraform-kubernetes-prometheus-adapter-deployment",
+          # "terraform-kubernetes-certmanager-deployment",
+          # "terraform-kubernetes-certificate-manager-deployment",
+          # "terraform-kubernetes-secrets-manager-deployment",
+          # "terraform-kubernetes-traefik-deployment",
+          # "terraform-kubernetes-flux-deployment",
+          # "terraform-kubernetes-argo-deployment",
+          # "terraform-kubernetes-metallb-deployment",
+          # ## proxmox
+          # "terraform-proxmox-kubernetes-cluster",
+          # "terraform-proxmox-kubernetes-node",
+          # ## oracle
+          # "terraform-oracle-kubernetes-node",
+          # "terraform-oracle-base-vpc",
+          # "terraform-oracle-peering-local",
+          # ## zerotier
+          # "terraform-zerotier-base-network",
+          # "terraform-zerotier-base-member",
+          # "terraform-zerotier-cluster-network",
     steps:
-      - name: 'Checkout'
+      - name: 'checkout'
         uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
+      - name: 'setup python'
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
@@ -24,4 +52,5 @@ jobs:
       - name: 'run python sync scripts'
         run: python sync/sync-modules.py
         env:
+          REPO: ${{ matrix.repository }}'
           REPO_WORKFLOWS_TOKEN: ${{ secrets.REPO_WORKFLOWS_TOKEN }}
